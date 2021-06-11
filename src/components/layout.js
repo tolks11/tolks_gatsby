@@ -4,6 +4,7 @@ import { container, heading, navLinks,
         navLinkItem, navLinkText } from './layout.module.css'
 
 
+
 const Layout = ({ pageTitle, children }) => {
     return (
         <main className={container}>
@@ -30,6 +31,6 @@ const Layout = ({ pageTitle, children }) => {
             <h1 className={heading}>{pageTitle}</h1>
                 {children}
         </main>
-            )
-          }
-          export default Layout
+    )
+}
+export default Layout
