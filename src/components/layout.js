@@ -4,27 +4,32 @@ import { container, heading, navLinks,
         navLinkItem, navLinkText } from './layout.module.css'
 
 
-        const Layout = ({ pageTitle, children }) => {
-            return (
-              <main className={container}>
-                <title>{pageTitle}</title>
-                <nav>
-                  <ul className={navLinks}>
-                    <li className={navLinkItem}>
-                      <Link to="/" className={navLinkText}>
+const Layout = ({ pageTitle, children }) => {
+    return (
+        <main className={container}>
+            <title>{pageTitle}</title>
+            <nav>
+                <ul className={navLinks}>
+                <li className={navLinkItem}>
+                    <Link to="/" className={navLinkText}>
                         Home
-                      </Link>
-                    </li>
-                    <li className={navLinkItem}>
-                      <Link to="/about" className={navLinkText}>
+                    </Link>
+                </li>
+                <li className={navLinkItem}>
+                    <Link to="/about" className={navLinkText}>
                         About
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-                <h1 className={heading}>{pageTitle}</h1>
+                    </Link>
+                </li>
+                <li className={navLinkItem}>
+                    <Link to="/contact-me" className={navLinkText}>
+                        Get In Touch
+                    </Link>
+                </li>
+                </ul>
+            </nav>
+            <h1 className={heading}>{pageTitle}</h1>
                 {children}
-              </main>
+        </main>
             )
           }
           export default Layout
